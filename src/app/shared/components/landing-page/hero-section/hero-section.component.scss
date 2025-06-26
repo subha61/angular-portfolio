@@ -1,0 +1,35 @@
+.Hero-stats {
+    max-width: 54%;
+    .Hero-text {
+        max-width: 100%;
+        padding-left: 5vh;
+      }
+      .Hero-text h1 {
+        font-size: 3.5rem;
+        line-height: 1.2;
+      }
+      .Hero-text p {
+        font-size: 1.1rem;
+        color: #555;
+        max-width: 90%;
+      }
+      .Hero-button {
+        background-color: #a855f7;
+        color: white;
+      }
+  }
+
+  .Hero-img img {
+    width: 103%;
+  }
+
+  .stat-box {
+    background-color: #f5edff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    width: 180px;
+    p {
+        color: #666;
+        font-size: 0.95rem;
+      }
+  }
+  

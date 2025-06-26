@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .bg-radial-soft {
+      background: radial-gradient(at top right, #f5d9ff 0%, transparent 60%),
+                  radial-gradient(at bottom right, #e0fff4 0%, transparent 40%),
+                  #ffffff;
+    }
+  }
