@@ -17,6 +17,6 @@ module.exports = {
       },
     },
   },
-  plugins: [require("daisyui")], // ✅ Loads DaisyUI plugin
+  plugins: [], // ✅ Loads DaisyUI plugin
 }
 
