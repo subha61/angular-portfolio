@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "ng build --base-href=https://subha61.github.io/angular-portfolio/ && npx angular-cli-ghpages --dir=dist/angular-portfolio"
   },
   "private": true,
   "dependencies": {
