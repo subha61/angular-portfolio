@@ -1,0 +1,35 @@
+<button
+  [disabled]="disabled || isLoading"
+  (click)="onClick()"
+  class="group flex items-center justify-center gap-2 font-semibold transition duration-300 "
+  [ngClass]="[
+    type === 'primary'
+      ? 'bg-[#a855f7] text-white hover:bg-[#a855f7]/80'
+      : 'border border-[#a855f7] text-[#a855f7] hover:bg-[#a855f7] hover:text-white',
+    getWidthClass(),
+    getHeightClass(),
+    customClass,
+    (disabled || isLoading) ? 'opacity-50 cursor-not-allowed pointer-events-none' : ''
+  ]"
+>
+  <!-- Spinner -->
+  <ng-container *ngIf="isLoading">
+    <div class="h-5 w-5 border-2 border-[#a855f7] border-t-transparent rounded-full animate-spin"></div>
+  </ng-container>
+
+  <!-- Left Icon -->
+<ng-container *ngIf="!isLoading">
+    <ng-content select="[leftIcon]"></ng-content>
+</ng-container>
+
+  <!-- Button Content -->
+  <!-- Label -->
+  <span>{{ isLoading ? 'Loading...' : label }}</span>
+
+  <!-- Right Icon -->
+  <ng-container *ngIf="!isLoading">
+    <ng-content select="[rightIcon]"></ng-content>
+</ng-container>
+
+</button>
+

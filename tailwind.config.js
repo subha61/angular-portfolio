@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./src/**/*.{html,ts}", // Tells Tailwind to scan your Angular templates
   ],
+  safelist: ['text-white'],
   theme: {
     extend: {
       spacing: {
