@@ -1,0 +1,12 @@
+<nav class="sidebar p-3">
+    <ul class="nav flex-column">
+      <li class="nav-item" *ngFor="let data of siteBarList">
+        <a class="nav-link" 
+           (click)="navigate(data.routeURL)" 
+           [class.active]="activePage === data.routeURL">
+          <i [ngClass]="'bi ' + data.icon + ' me-2'"></i> {{data.name}}
+        </a>
+      </li>
+    </ul>
+  </nav>
+  

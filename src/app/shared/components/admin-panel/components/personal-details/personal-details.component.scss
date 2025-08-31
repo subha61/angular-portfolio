@@ -1,0 +1,35 @@
+.profile-section {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .profile-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+  
+  .upload-btn {
+    bottom: 0; 
+    right: 0;
+    transform: translate(20%, 20%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+  
+    i {
+      font-size: 0.9rem;
+    }
+  
+    &:hover {
+      background-color: #16a34a;
+    }
+  }
+
+  .icon-color {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+  }
+  

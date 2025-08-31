@@ -16,4 +16,9 @@ export const routes: Routes = [
         loadChildren: () =>
           import('./core/auth/components/authentication/authentication.routes').then((m) => m.AUTHENTICATION_ROUTES),
     },
+    {
+        path: 'admin',
+        loadChildren: () =>
+          import('./shared/components/admin-panel/admin-panel.routes').then((m) => m.ADMIN_PANEL_ROUTES),
+    },
 ];

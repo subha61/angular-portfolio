@@ -9,3 +9,15 @@
                   #ffffff;
     }
   }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    
+    /* Clip background to text */
+    -webkit-background-clip: text; // ✅ For Safari/Chrome
+    background-clip: text;         // ✅ Standard
+  
+    /* Make text transparent so gradient shows through */
+    -webkit-text-fill-color: transparent; // ✅ Safari/Chrome
+    color: transparent;                   // ✅ Fallback
+  }

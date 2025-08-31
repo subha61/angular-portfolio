@@ -1,0 +1,16 @@
+<div class="admin-layout d-flex flex-column vh-100">
+    <!-- Header -->
+    <app-header (logoutEvent)="logout()"></app-header>
+  
+    <!-- Body -->
+    <div class="flex-grow-1 d-flex">
+      <!-- Sidebar -->
+      <app-sidebar></app-sidebar>
+  
+      <!-- Main Content -->
+      <main class="content flex-grow-1 p-4">
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  </div>
+  
