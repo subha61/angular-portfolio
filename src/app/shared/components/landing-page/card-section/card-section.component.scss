@@ -1,0 +1,34 @@
+.card {
+    margin: 90px 0 0 0;
+    font-family: arial, sans-serif;
+    background-color: #132238;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  
+  .card h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  .card p {
+    font-size: 15px;
+    margin-bottom: 25px;
+    color: #a5acb5;
+  }
+  .card a {
+    display: inline-block;
+    background-color: #a53dff;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  .idea {
+    margin-top: -15px;
+  }
+  
+  .team {
+    margin-top: -25px;
+  }

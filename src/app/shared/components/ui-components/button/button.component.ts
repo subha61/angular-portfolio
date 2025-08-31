@@ -15,7 +15,7 @@ export class ButtonComponent {
 
   @Input() iconColor: string = 'text-white'; // Tailwind text color class
   @Input() iconSize: string = 'text-base';   // Tailwind font size class
-  @Input() hoverColorOnly: boolean = false;          // Control hover-only effect
+  @Input() hoverColorOnly: boolean = false;  // Control hover-only effect
 
   @Input() width: string | number = 180;
   @Input() height: string | number = 48;

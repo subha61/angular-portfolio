@@ -1,0 +1,33 @@
+footer {
+    height: 200px;
+    position: relative;
+    z-index: 1;
+    color: white;
+    background-color: #2B384C;
+    padding: 30px;
+}
+.circle {
+    background-color: #a855f7;
+    color: white;
+  }
+.footer-contents {
+    display: flex;
+    justify-content: space-between;
+    margin: 120px 135px;
+}
+.footer-contents .links > a {
+    color: white;
+    font-weight: 200;
+}
+.copyright-text {
+    display: flex;
+    align-items: center;
+    margin-right: 36px;
+    font-weight: 200;
+}
+.footer-contents .portfolio-logo .circle {
+    font-size: 24px;
+    font-weight: 500;
+    width: 56px;
+    height: 56px;
+}

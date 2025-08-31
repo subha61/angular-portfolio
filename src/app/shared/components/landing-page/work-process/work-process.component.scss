@@ -1,0 +1,117 @@
+.work-process-section {
+    width: auto;
+    height: auto;
+    top: 220px;
+    gap: 10px;
+    padding-top: 155px;
+    padding-bottom: 140px;
+    background-color: #f0f1f3;
+    margin-top: -60px;
+  }
+  
+  .heading {
+    width: 323px;
+    height: 56px;
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 400px;
+    font-size: 33px;
+    line-height: 56px;
+    letter-spacing: 0%;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1320px;
+    height: 600px;
+    gap: 143px;
+  }
+  
+  .left-content {
+    flex: 2;
+    width: 529px;
+    height: 240px;
+    gap: 24px;
+    margin-top: 100px;
+    margin-left: 74px;
+
+    p {
+      line-height: 24px;
+      font-weight: 300;
+      color: #697484;
+      margin: 20px 0;
+    }
+  }
+  
+  .right-content {
+    width: 680px;
+    height: 600px;
+    border-radius: 12px;
+    padding-inline-end: 0cap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-self: end;
+    color: #132238;
+    font-family: "Segoe UI", sans-serif;
+    transform-box: uopper-left;
+    margin-right: 2px;
+  }
+  
+  .right-content :hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .process-step {
+    width: 320px;
+    height: 280px;
+    left: 672px;
+    border-radius: 12px;
+    padding: 32px;
+    gap: 32px;
+    box-shadow: 32px 32px 124px 0px #2b384c1a;
+    background: #ffffff;
+  }
+  
+  .icon-box-one {
+    width: 32px;
+    height: 32px;
+    gap: 10px;
+    border-radius: 6px;
+    padding: 20px;
+    background: #222ba4;
+  }
+  
+  .icon-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    padding: 30px;
+    background: #edd8ff80;
+  }
+  .image-back {
+    background: #A53DFF
+  }
+  
+  .step-icon {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    bottom: 15px;
+    right: 15px;
+    max-width: 40px;
+  }
+  
+  .process-step h3 {
+    font-size: 20px;
+    line-height: 24px;
+    color: #132238;
+    margin: 15px 0;
+  }
+  
+  .process-step p {
+    width: 248px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #556070;
+  }
