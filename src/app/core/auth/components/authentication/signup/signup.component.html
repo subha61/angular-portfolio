@@ -1,0 +1,96 @@
+<div class="signup-form-container">
+    <h2 class="form-title">Create <span>Account</span> ✨</h2>
+  
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+  
+      <!-- Full Name -->
+      <div class="form-group">
+        <input
+          type="text"
+          id="fullName"
+          formControlName="fullName"
+          placeholder=" "
+          required
+        />
+        <label for="fullName">Full Name</label>
+        <div class="error-msg" *ngIf="signupForm.get('fullName')?.invalid && signupForm.get('fullName')?.touched">
+          Full name is required.
+        </div>
+      </div>
+  
+      <!-- Email -->
+      <div class="form-group">
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          placeholder=" "
+          required
+        />
+        <label for="email">Email Address</label>
+        <div class="error-msg" *ngIf="signupForm.get('email')?.hasError('required') && signupForm.get('email')?.touched">
+          Email is required.
+        </div>
+        <div class="error-msg" *ngIf="signupForm.get('email')?.hasError('email') && signupForm.get('email')?.touched">
+          Enter a valid email address.
+        </div>
+      </div>
+  
+      <!-- Password -->
+      <div class="form-group">
+        <input
+          type="password"
+          id="password"
+          formControlName="password"
+          placeholder=" "
+          required
+        />
+        <label for="password">Password</label>
+        <div class="error-msg" *ngIf="signupForm.get('password')?.hasError('required') && signupForm.get('password')?.touched">
+          Password is required.
+        </div>
+        <div class="error-msg" *ngIf="signupForm.get('password')?.hasError('minlength') && signupForm.get('password')?.touched">
+          Password must be at least 6 characters.
+        </div>
+      </div>
+  
+      <!-- Confirm Password -->
+      <div class="form-group">
+        <input
+          type="password"
+          id="confirmPassword"
+          formControlName="confirmPassword"
+          placeholder=" "
+          required
+        />
+        <label for="confirmPassword">Confirm Password</label>
+      
+        <!-- Show only one message -->
+        <div class="error-msg" *ngIf="signupForm.get('confirmPassword')?.touched">
+          <span *ngIf="signupForm.get('confirmPassword')?.hasError('required')">
+            Confirm password is required.
+          </span>
+          <span *ngIf="signupForm.hasError('passwordMismatch') && !signupForm.get('confirmPassword')?.hasError('required')">
+            Passwords do not match.
+          </span>
+        </div>
+      </div>
+  
+      <!-- Terms -->
+      <!-- <div class="form-options">
+        <label>
+          <input type="checkbox" formControlName="terms" />
+          I agree to the <a href="#">Terms & Conditions</a>
+        </label>
+        <div class="error-msg" *ngIf="signupForm.get('terms')?.hasError('requiredTrue') && signupForm.get('terms')?.touched">
+          You must accept terms to continue.
+        </div>
+      </div> -->
+  
+      <!-- Submit -->
+      <button class="btn-submit" type="submit" [disabled]="signupForm.invalid">
+        Sign Up
+      </button>
+    </form>
+  </div>
+  

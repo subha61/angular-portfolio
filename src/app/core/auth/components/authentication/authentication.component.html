@@ -1,0 +1,42 @@
+<div class="login-container d-flex justify-content-center align-items-center">
+  <div class="card login-card shadow-lg">
+    <div class="card-body p-4">
+
+      <!-- Modern Tabs -->
+      <ul ngbNav #nav="ngbNav" class="nav-tabs-custom justify-content-center">
+        <li [ngbNavItem]="1">
+          <a ngbNavLink>Login</a>
+          <ng-template ngbNavContent>
+            <app-login></app-login>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="2">
+          <a ngbNavLink>Signup</a>
+          <ng-template ngbNavContent>
+            <app-signup></app-signup>
+          </ng-template>
+        </li>
+      </ul>
+
+      <!-- Tab Content -->
+      <div [ngbNavOutlet]="nav" class="mt-4"></div>
+
+      <!-- Divider -->
+      <div class="divider my-3 text-center">
+        <span>or continue with</span>
+      </div>
+
+      <!-- Social Login Buttons -->
+      <div class="social-login d-flex justify-content-center gap-3">
+        <button class="btn btn-design">
+          <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" />
+          <span>Google</span>
+        </button>
+        <button class="btn btn-design">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
+          <span>LinkedIn</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

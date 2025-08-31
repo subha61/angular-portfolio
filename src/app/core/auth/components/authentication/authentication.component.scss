@@ -1,0 +1,105 @@
+.login-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.login-card {
+  width: 420px;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.nav-tabs-custom {
+  display: flex;
+  gap: 1rem;
+  border: none;
+
+  li {
+    list-style: none;
+
+    a {
+      display: inline-block;
+      padding: 0.6rem 1.5rem;
+      border-radius: 25px;
+      font-weight: 500;
+      font-size: 1rem;
+      color: #555;
+      background: #f5f5f5;
+      border: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+
+      &:hover {
+        background: #e9e9e9;
+        color: #333;
+      }
+
+      &.active {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        color: #fff !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}
+
+/* Remove default bootstrap underline */
+.nav-tabs-custom .nav-link {
+  border: none !important;
+}
+
+/* Divider with line */
+.divider {
+  position: relative;
+  text-align: center;
+  color: #999;
+  font-size: 0.9rem;
+
+  span {
+    background: #fff;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #ddd;
+    z-index: 0;
+  }
+}
+
+/* Social buttons */
+.social-login .btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.btn-design {
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #444;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+
+  &:hover {
+    background: #f8f8f8;
+    border-color: #ccc;
+  }
+}

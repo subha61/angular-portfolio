@@ -1,0 +1,115 @@
+.signup-form-container {
+    max-width: 380px;
+    margin: auto;
+    padding: 2rem 2.5rem;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  
+    .form-title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+      color: #222;
+  
+      span {
+        color: #6a11cb;
+      }
+    }
+  
+    .form-group {
+      position: relative;
+      margin-bottom: 2rem;
+  
+      input {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #ddd;
+        background: transparent;
+        padding: 0.8rem 0.5rem;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+  
+        &:focus {
+          border-color: #6a11cb;
+          outline: none;
+        }
+  
+        &:focus + label,
+        &:not(:placeholder-shown) + label {
+          top: -10px;
+          font-size: 0.75rem;
+          color: #6a11cb;
+        }
+      }
+  
+      label {
+        position: absolute;
+        left: 8px;
+        top: 12px;
+        font-size: 1rem;
+        color: #888;
+        pointer-events: none;
+        transition: all 0.3s ease;
+      }
+  
+      .error-msg {
+        font-size: 0.75rem;
+        color: #e63946;
+        margin-top: 0.3rem;
+        position: absolute;
+        bottom: -18px;
+      }
+    }
+  
+    .form-options {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+  
+      label {
+        font-size: 0.85rem;
+        color: #444;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+  
+      .forgot-link {
+        font-size: 0.85rem;
+        text-decoration: none;
+        color: #2575fc;
+        font-weight: 500;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  
+    .btn-submit {
+      width: 100%;
+      padding: 0.9rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 14px rgba(37, 117, 252, 0.25);
+      }
+  
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    }
+  }
+  

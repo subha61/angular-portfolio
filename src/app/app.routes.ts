@@ -11,4 +11,9 @@ export const routes: Routes = [
         loadChildren: () =>
           import('./shared/components/ui-components/ui-components.routes').then((m) => m.UI_COMPONENTS_ROUTES),
     },
+    {
+        path: 'login',
+        loadChildren: () =>
+          import('./core/auth/components/authentication/authentication.routes').then((m) => m.AUTHENTICATION_ROUTES),
+    },
 ];
