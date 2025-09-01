@@ -1,6 +1,6 @@
 .profile-section {
     background-color: #f8f9fa;
-    min-height: 100vh;
+    // min-height: 100vh;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   }
@@ -32,4 +32,67 @@
   .icon-color {
     background: linear-gradient(135deg, #6a11cb, #2575fc);
   }
+
+  // .profile-container {
+  //   max-width: 900px;
+  //   margin: auto;
+  
+    .card {
+      border: none;
+      background: #fff;
+  
+      .card-header {
+        padding: 1rem 1.25rem;
+  
+        .section-title {
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: #064b2d;
+        }
+  
+        .btn-edit {
+          background: linear-gradient(135deg, #6a11cb, #2575fc);
+          color: #fff;
+          border-radius: 8px;
+          font-size: 0.875rem;
+          padding: 0.35rem 0.85rem;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+          &:hover {
+            box-shadow: 0 6px 14px rgba(37, 117, 252, 0.25);
+          }
+        }
+  
+        .btn-edit-light {
+          background-color: #f9f9f9;
+          border: 1px solid  #2575fc;
+          font-size: 0.875rem;
+          padding: 0.35rem 0.85rem;
+  
+          &:hover {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+          }
+        }
+      }
+  
+      .card-body {
+        padding: 1.25rem;
+  
+        .field-label {
+          font-size: 0.85rem;
+          color: #6c757d;
+          margin-bottom: 0.25rem;
+          display: block;
+        }
+  
+        .field-value {
+          font-size: 0.95rem;
+          font-weight: 500;
+          color: #212529;
+        }
+      }
+    }
+  // }
+  
   

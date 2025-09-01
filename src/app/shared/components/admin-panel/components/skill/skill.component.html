@@ -1,0 +1,68 @@
+<div class="skills-container card p-3">
+    <div class="skills-header d-flex align-items-center">
+      <h5 class="mb-0 me-2 gradient-text">My Skills</h5>
+      <div class="flex-grow-1 border-bottom"></div>
+    </div>
+  
+    <!-- Empty state -->
+    <div *ngIf="skills.length === 0" class="empty-state text-center p-5">
+      <button class="btn plus-btn" (click)="openModal()">+</button>
+      <p class="mt-3 text-muted">You haven't added any skills yet.</p>
+    </div>
+  
+    <!-- Skills list -->
+    <div *ngIf="skills.length > 0" class="skills-list mt-3">
+      <div class="d-flex flex-wrap gap-2">
+        <span *ngFor="let skill of skills" class="chip">
+          {{ skill }}
+        </span>
+        <button class="btn plus-btn small" (click)="openModal()">+</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modern Popup -->
+  <div class="popup-backdrop" *ngIf="showModal" (click)="closeModal()"></div>
+  <div class="popup" *ngIf="showModal">
+    <div class="popup-header d-flex justify-content-between align-items-center">
+      <h5 class="gradient-text">Add Skills</h5>
+      <button class="close-btn" (click)="closeModal()">×</button>
+    </div>
+  
+    <div class="popup-body" [formGroup]="skillForm">
+      <!-- Modern input -->
+      <input type="text"
+             class="modern-input"
+             placeholder="Type a skill and press Enter"
+             formControlName="skillInput"
+             (keydown)="addSkillFromInput($event)">
+  
+      <!-- Suggestions -->
+      <div class="mt-3">
+        <strong class="section-title gradient-text">Suggestions</strong>
+        <div class="d-flex flex-wrap gap-2 mt-2">
+          <span *ngFor="let suggestion of suggestions" class="chip suggestion"
+                (click)="addSkill(suggestion)">
+            {{ suggestion }}
+          </span>
+        </div>
+      </div>
+  
+      <!-- Selected -->
+      <div class="mt-3" *ngIf="skills.length > 0">
+        <strong class="section-title gradient-text">Selected</strong>
+        <div class="d-flex flex-wrap gap-2 mt-2">
+          <span *ngFor="let skill of skills" class="chip">
+            {{ skill }}
+            <button type="button" class="chip-close" (click)="removeSkill(skill)">×</button>
+          </span>
+        </div>
+      </div>
+    </div>
+  
+    <div class="popup-footer d-flex justify-content-end gap-2">
+      <button class="btn-outline" (click)="closeModal()">Cancel</button>
+      <button class="btn-primary" (click)="finish()">Finish</button>
+    </div>
+  </div>
+  
