@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
-import { Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { SideBarList } from '../../constant';
 
 @Component({
@@ -16,7 +16,16 @@ export class SidebarComponent {
   siteBarList = SideBarList;
   activePage = SideBarList[0].routeURL;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    this.setActiveFromUrl(this.router.url);
+  }
+
+  private setActiveFromUrl(url: string): void {
+    const urlPart = url.split('/').pop();
+    this.activePage = urlPart || '';
+  }
 
   navigate(page: string) {
     this.activePage = page;

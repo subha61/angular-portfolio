@@ -178,10 +178,181 @@
         box-shadow: 0 6px 14px rgba(37, 117, 252, 0.25);
     }
   }
+
+  /* Modern Dropdown */
+  .custom-dropdown {
+    position: relative;
+    width: 100%;
+  
+    .selected {
+      padding: 12px 14px;
+      border: 1px solid #dee2e6;
+      border-radius: 12px;
+      font-size: 14px;
+      background: #fff;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: border 0.2s;
+  
+      &:hover {
+        border-color: #2575fc;
+      }
+    }
+  
+    .arrow {
+      font-size: 12px;
+      color: #6c757d;
+    }
+  
+    .options {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      border: 1px solid #dee2e6;
+      border-radius: 12px;
+      margin-top: 4px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      list-style: none;
+      padding: 6px 0;
+      z-index: 10;
+  
+      li {
+        padding: 10px 14px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background 0.2s;
+  
+        &:hover {
+          background: linear-gradient(135deg, #6a11cb, #2575fc);
+          color: #fff;
+        }
+      }
+    }
+  
+    &.open .selected {
+      border-color: #2575fc;
+    }
+  }
+  
+
+/* Year Input */
+input[type="number"].modern-input {
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Hide arrows in number input for modern browsers */
+.modern-input[type="number"]::-webkit-inner-spin-button,
+.modern-input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.modern-input[type="number"] {
+  appearance: textfield; /* Modern standard */
+}
+
   
   .section-title {
     font-size: 14px;
     font-weight: 600;
     color: #495057;
+  }
+
+  .card {
+    border: none;
+    background: #fff;
+
+    .card-header {
+      padding: 1rem 1.25rem;
+
+      .section-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #064b2d;
+      }
+    }
+  }
+  
+
+  .skills-table {
+    .modern-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 10px;
+  
+      thead {
+        background: #f8f9fa;
+        tr {
+          th {
+            padding: 12px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #495057;
+            text-align: left;
+          }
+        }
+      }
+  
+      tbody {
+        tr {
+          background: #fff;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+          border-radius: 12px;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+          }
+  
+          td {
+            padding: 12px 16px;
+            font-size: 14px;
+            color: #212529;
+  
+            &:first-child {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  
+    .btn-icon {
+      border: none;
+      background: transparent;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0 4px;
+      transition: transform 0.2s ease;
+  
+      &.edit {
+        color: #0d6efd;
+      }
+      &.delete {
+        color: #dc3545;
+      }
+  
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  
+    .badge {
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+  }
+
+  ::ng-deep .btn-icon.edit {
+    color: #0d6efd !important;
   }
   
