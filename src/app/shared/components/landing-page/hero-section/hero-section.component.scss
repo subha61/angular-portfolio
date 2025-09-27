@@ -19,8 +19,17 @@
       }
   }
 
+  .Hero-img {
+    width: 500px;
+    height: 600px;
+    margin-top: 35px;
+  }
+
   .Hero-img img {
-    width: 103%;
+    // width: 103%;
+    width: 100%;
+    height: 100%;
+    // object-fit: contain;
   }
 
   .stat-box {
